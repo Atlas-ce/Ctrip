@@ -73,7 +73,7 @@ def DataProcessing(FlightsDiv):
 def AllFlights(allFlightsDiv):
     for FlightsDiv in allFlightsDiv[1:]:
         print(DataProcessing(FlightsDiv))
-
+#'sha'为出发地，'can'为到达地，'2023-12-20'为出发日期
 AllFlights(FlightsPage('sha','can','2023-12-20').find_all("div",{"class":"flight-box"}))
 
 
