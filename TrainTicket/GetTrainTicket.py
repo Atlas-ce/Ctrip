@@ -61,7 +61,7 @@ def ReviseResult(TrainDiv,other_info):
     reuslt['ticket_information']=GetTicketInformation(TrainDiv)
     reuslt['price']=GetPrice(TrainDiv)
     return reuslt
-、
+
 def DataProcessing(TrainDiv):
     if  len(TrainInfo(TrainDiv)) > 0:   
         return ReviseResult(TrainDiv,TrainInfo(TrainDiv)[0].text)
@@ -72,5 +72,5 @@ def AllTrains(allTrainDivs):
     for TrainDiv in allTrainDivs:
         print(DataProcessing(TrainDiv))
 
-AllTrains(GetTrainPage('成都','广州','2023-12-21').find("section",{"role":"product"}).find_all("div",{"class":"list-bd"}))
+AllTrains(GetTrainPage('成都','运城','2023-12-21').find("section",{"role":"product"}).find_all("div",{"class":"list-bd"}))
 
